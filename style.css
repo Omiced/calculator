@@ -1,0 +1,61 @@
+*, *::before,*::after{
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+/* div container */
+.calculator{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat (5,100px );
+}
+
+/* buttons*/
+.calculator > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255,255,255,.75);
+}
+
+.calculator > button:hover{
+    background-color: rgba(255,255,255,.9);
+}
+
+.span2{
+    grid-column: span 2;
+}
+
+/* div results*/
+
+.result{
+    grid-column: 1/-1;
+    background: rgba(0,0,0,.6);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding:10px;
+}
+
+.result .previus{
+    color: rgba(255,255,255, .75);
+    font-size: 1.5rem;
+}
+
+.result .current{
+    color: white;
+    font-size: 2.5rem;
+}
